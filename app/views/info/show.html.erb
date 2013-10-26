@@ -1,0 +1,9 @@
+<h1>Hello <%= current_user.email %></h1>
+<% if @info.nil? %>
+    <p>No user info</p>
+    <%= link_to 'Create my info', new_info_path %>
+<% else %>
+    <p>I am <%= @info.name %> and <%= @info.self_description %></p>
+    <%= link_to 'Edit my info', edit_info_path %>
+    | <%= link_to 'Delete my info', info_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
