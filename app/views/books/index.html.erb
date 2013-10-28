@@ -1,0 +1,25 @@
+<h1>Here will list my books</h1>
+<% if current_user.books.empty? %>
+    <p>No book</p>
+<% else %>
+    <table border="0">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+        </tr>
+        <% current_user.books.each do |book| %>
+            <tr>
+                <td>
+                    <%= book.title %>
+                </td>
+                <td>
+                    <%= book.author%>
+                </td>
+                <td>
+                    <%= link_to 'Show details', book_path(book) %>
+                </td>
+            </tr>
+        <% end %>
+    </table>
+<% end %>
+<%= link_to 'Add books', new_book_path %>

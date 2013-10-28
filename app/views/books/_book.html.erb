@@ -1,0 +1,24 @@
+<p>
+<strong>Title:</strong>
+<%= @book.title %>
+</p>
+
+<p>
+<strong>Author:</strong>
+<%= @book.author %>
+</p>
+
+<p>
+<strong>Publisher:</strong>
+<%= @book.publisher %>
+</p>
+
+<p>
+<strong>Amount:</strong>
+<%= @book.amount%>
+</p>
+
+<p>
+<%= link_to 'Edit it', edit_book_path(@book) %>
+| <%= link_to 'Delete it', book_path, method: :delete, data: { confirm: 'Are you sure?'} %>
+</p>
