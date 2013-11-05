@@ -7,6 +7,7 @@ Auction::Application.routes.draw do
       delete 'logout' => 'devise/sessions#destroy', as: :destroy_user_session
       resource :info, controller: :info
       resources :books, controller: :books
+      resources :activities, controller: :activities
   end
   resources :home, only: :index
   root 'home#index'
