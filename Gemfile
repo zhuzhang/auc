@@ -45,3 +45,5 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'devise', '~> 3.1.1'
 gem 'bootstrap-sass'
+gem 'redcarpet', '~> 2.1.1'
+gem 'nokogiri'
